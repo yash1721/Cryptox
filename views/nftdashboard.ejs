@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auction Dashboard </title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/nftstyle.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Dashboard -->
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <div class="sidebar flex-c flex-sb">
+        <div class="brand">Auction </div>
+        <div class="side-nav">
+          <div class="menu-item flex active">
+            <div class="icon">
+              <ion-icon name="grid"></ion-icon>
+            </div>
+
+            <p>Dashboard</p>
+          </div>
+
+          <div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="magnet-outline"></ion-icon>
+            </div>
+
+            <p>Active Bids</p>
+          </div>
+
+          <div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="storefront-outline"></ion-icon>
+            </div>
+
+            <p>Market</p>
+          </div>
+
+          <div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="heart-circle-outline"></ion-icon>
+            </div>
+
+            <p>Favourite</p>
+          </div>
+
+          <div class="border"></div>
+
+          <div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="reader-outline"></ion-icon>
+            </div>
+
+            <p><a href="/portfolio"style="text-decoration:none;color:white;">My Portfolio</a></p>
+          </div>
+
+          <div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="bookmark-outline"></ion-icon>
+            </div>
+
+            <p>History</p>
+          </div>
+
+          <div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="wallet-outline"></ion-icon>
+            </div>
+
+            <p>Wallet</p>
+          </div>
+
+          <div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="settings-outline"></ion-icon>
+            </div>
+
+            <p>Setting</p>
+          </div>
+        </div>
+
+        <div class="log-out">
+          <div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="log-out-outline"></ion-icon>
+            </div>
+
+            <p><a href="/logout"style="text-decoration:none;color:red;">Logout</a></p>
+          </div>
+        </div>
+      </div>
+      <!-- End Sidebar -->
+
+      <!-- Dashboard Content -->
+      <div class="dashboard-content">
+        <!-- ======Topbar======= -->
+        <div class="topbar flex flex-sb">
+          <div class="search flex">
+            <div class="icon">
+              <ion-icon name="search-outline"></ion-icon>
+            </div>
+            <input type="text" placeholder=" Search any collection" />
+          </div>
+
+          <div class="theme flex">
+            <div class="dark flex">
+              <ion-icon name="moon-outline"></ion-icon>
+            </div>
+            <div class="light active flex">
+              <ion-icon name="sunny-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="notification icon">
+            <ion-icon name="notifications-outline"></ion-icon>
+          </div>
+
+          <div class="user flex flex-sb" onclick="toggleDropdown()">
+            <img src="data:image/png;base64,<%= data.Image %>" alt="" />
+            <p><%= data.name %></p>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </div>
+        </div>
+        <!-- ======End Topbar======= -->
+
+        <!-- ======Section======= -->
+        <div class="section flex flex-sb">
+          <!-- Section Left -->
+          <div class="section-left">
+            <!-- ======Banner======= -->
+            <div class="banner flex flex-sb">
+              <div class="text">
+                <h2>
+                  Dicover and sell <br />
+                  your own NFTs
+                </h2>
+
+                <a href="#" class="btn">Discover Now</a>
+              </div>
+
+              <img src="img/banner.svg" alt="" />
+            </div>
+
+            <div class="nfts">
+              <div class="trending heading flex flex-sb">
+                <h2>Trending NFTs</h2>
+                <p>See all</p>
+              </div>
+
+              <!-- ======Categories======= -->
+
+              <div class="categories flex flex-sb">
+                <div class="category flex">
+                  <div class="icon">🔥</div>
+                  <p>Trending</p>
+                </div>
+
+                <div class="category flex">
+                  <div class="icon">🎨</div>
+                  <p>Art</p>
+                </div>
+
+                <div class="category flex">
+                  <div class="icon">🕹️</div>
+                  <p>Game</p>
+                </div>
+
+                <div class="category flex">
+                  <div class="icon">👗</div>
+                  <p>Fashion</p>
+                </div>
+
+                <div class="category flex">
+                  <div class="icon">🎵</div>
+                  <p>Music</p>
+                </div>
+              </div>
+
+              <!-- =====Browse NFT===== -->
+              <div class="browse">
+                <div class="nft">
+                  <img src="img/nft-1.jpg" alt="" />
+                  <div class="title">Weary Artwork</div>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <img src="img/user.png" alt="" />
+                      <p>Andrew</p>
+                    </div>
+                    <div class="price">4.5 ETH</div>
+                  </div>
+                </div>
+
+                <div class="nft">
+                  <img src="img/nft-2.jpg" alt="" />
+                  <div class="title">Spectrum of Color</div>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <img src="img/user.png" alt="" />
+                      <p>Andrew</p>
+                    </div>
+                    <div class="price">4 ETH</div>
+                  </div>
+                </div>
+
+                <div class="nft">
+                  <img src="img/nft-3.jpg" alt="" />
+                  <div class="title">Vivid Artwork</div>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <img src="img/user.png" alt="" />
+                      <p>Andrew</p>
+                    </div>
+                    <div class="price">3.5 ETH</div>
+                  </div>
+                </div>
+
+                <div class="nft">
+                  <img src="img/nft-4.jpg" alt="" />
+                  <div class="title">Nature's Love</div>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <img src="img/user.png" alt="" />
+                      <p>Andrew</p>
+                    </div>
+                    <div class="price">5 ETH</div>
+                  </div>
+                </div>
+                <% for (let i = 0; i < events.length; i++) { %>
+                  <div class="nft" id="">
+                    
+                    <img src="data:image/png;base64,<%=events[i].Image %>" alt="" />
+                    <div class="title"><%=events[i].Name %></div>
+                    <div class="details flex flex-sb">
+                      <div class="author flex">
+                        <img src=" data:image/png;base64,<%=usereventdata[i].userImage %> " alt="" />
+                        <p><%= usereventdata[i].userName %></p>
+                      </div>
+                      <div class="price" ><%= events[i].startBid %> $</div>
+                    </div>
+                    <button type="button" class="btn btn-success bid-button" style="background-color: orange;"aria-label="<%= usereventdata[i].eventId %>">Start-Bidding</button>
+                  </div>
+                  <% } %>
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- Section Right -->
+          <div class="section-right">
+            <div class="graph flex-c">
+              <p>Balance</p>
+              <h2><%= Balance %> $</h2>
+
+              <img src="img/graph.svg" alt="" />
+            </div>
+
+            <div class="top-creators">
+              <div class="heading flex flex-sb">
+                <h2>Top Creators</h2>
+                <p>See all</p>
+              </div>
+
+              <div class="creator flex flex-sb">
+                <div class="follow-creator flex">
+                  <img src="img/user.png" alt="" />
+                  <div class="creator-details">
+                    <h3>Andrew</h3>
+                    <p>@Andrew</p>
+                  </div>
+                </div>
+
+                <a href="#" class="btn following">Following</a>
+              </div>
+
+              <div class="creator flex flex-sb">
+                <div class="follow-creator flex">
+                  <img src="img/user.png" alt="" />
+                  <div class="creator-details">
+                    <h3>Andrew</h3>
+                    <p>@Andrew</p>
+                  </div>
+                </div>
+
+                <a href="#" class="btn follow following">Follow</a>
+              </div>
+
+              <div class="creator flex flex-sb">
+                <div class="follow-creator flex">
+                  <img src="img/user.png" alt="" />
+                  <div class="creator-details">
+                    <h3>Andrew</h3>
+                    <p>@Andrew</p>
+                  </div>
+                </div>
+
+                <a href="#" class="btn follow following">Follow</a>
+              </div>
+
+              <div class="creator flex flex-sb">
+                <div class="follow-creator flex">
+                  <img src="img/user.png" alt="" />
+                  <div class="creator-details">
+                    <h3>Andrew</h3>
+                    <p>@Andrew</p>
+                  </div>
+                </div>
+
+                <a href="#" class="btn follow following">Follow</a>
+              </div>
+
+              <div class="creator flex flex-sb">
+                <div class="follow-creator flex">
+                  <img src="img/user.png" alt="" />
+                  <div class="creator-details">
+                    <h3>Andrew</h3>
+                    <p>@Andrew</p>
+                  </div>
+                </div>
+
+                <a href="#" class="btn follow following">Follow</a>
+              </div>
+
+              <div class="creator flex flex-sb">
+                <div class="follow-creator flex">
+                  <img src="img/user.png" alt="" />
+                  <div class="creator-details">
+                    <h3>Andrew</h3>
+                    <p>@Andrew</p>
+                  </div>
+                </div>
+
+                <a href="#" class="btn follow following">Follow</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ======End Section======= -->
+      </div>
+      <!-- End Dashboard Content -->
+    </div>
+    <!-- End Dashboard -->
+
+    <!-- Ion Icons Js -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+
+    <!-- JS -->
+    <script src="js/nftscript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+  <script>
+  </script>
+</html>

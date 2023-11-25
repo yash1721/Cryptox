@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/ProfitCalulator.css" />
+    <title>Cryptex</title>
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <h1>Crypto Profit Calculator</h1>
+    <div class="container">
+      <form id="from-currency">
+        <div class="form-group">
+          <label for="crypto-select">Select a crypto currency</label>
+          <select name="crypto-select" id="crypto-select">
+            <option value="">-- Select a cryptocurrency --</option>
+            <option value="bitcoin">Bitcoin (BTC)</option>
+            <option value="ethereum">Ethereum (ETH)</option>
+            <option value="litecoin">Litecoin (LTC)</option>
+            <option value="ripple">Ripple (XRP)</option>
+            <option value="uniswap">Uniswap (UNI)</option>
+            <option value="cardano">Cardano (ADA)</option>
+            <option value="polkadot">Polkadot (DOT)</option>
+            <option value="chainlink">Chainlink (LINK)</option>
+            <option value="OTHER">Other</option>
+          </select>
+          <div class="form-group"id='other-coin'style='margin-top:2%;'>
+            <label for="amount">Name</label>
+            <input
+              type="Text"
+              name="amount"
+              id="crypto-name"
+              placeholder="Enter name of Crypto "
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="amount">Invested Unit</label>
+          <input
+            type="number"
+            name="amount"
+            id="amount"
+            placeholder="Enter amount"
+          />
+        </div>
+        <div class="exit-price">
+            <div class="form-group">
+              <label for="sell-price">Buy price $</label>
+              <input
+                type="number"
+                name="buy-price"
+                id="buy-price"
+                placeholder="Enter sell price"
+              />
+            </div>
+            <div class="form-group">
+              <span class="SelectMarket-price">
+                <input type="checkbox" id="SelectMarket-price" />
+                <label for="SelectMarket-price">Market price $</label>
+              </span>
+  
+              <input
+                type="number"
+                name="Market-price"
+                id="Market-price"
+                placeholder="Enter Market price"
+                value="000000"
+                disabled
+              />
+            </div>
+          </div>
+        <div class="form-group">
+          <label for="fee">Enter The Date You Want to Sell</label>
+          <input
+            type="Date"
+            name="fee"
+            id="exit-date"
+            placeholder="Enter fee"
+          />
+        </div>
+        
+
+        <button class="btn btn-primary" type="submit" id="calculate">
+          Calculate
+        </button>
+      </form>
+
+      <div class="result"style="align-items:center;justify-content:center;font-weight:bold;font-size:x-large">
+        <h5 style="color:orange;"id='profit-heading'></h5>
+        <span id="profit"></span>
+      </div>
+    </div>
+
+    <script src="./js/ProfitCalculator1.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/cors-anywhere@0.4.4/lib/cors-anywhere.min.js "></script>
+  </body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cryptex Auction Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+    rel="stylesheet">
+ 
+
+  <link rel="shortcut icon" href="./images/favicon.svg" type="image/svg+xml" />
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="app">
+    <div class="header">
+      <div class="logo">
+        <a href="#" class="logo">
+          <img src="./images/logo.svg" width="100" height="100" alt="Cryptex logo" />
+        </a>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." />
+      </div>
+      <div class="user-settings">
+        <div class="dark-light">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+          </svg>
+        </div>
+        <div class="settings">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3" />
+            <path
+              d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
+          </svg>
+        </div>
+        <img class="user-profile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%281%29.png" alt=""
+          class="account-profile" alt="">
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="conversation-area">
+        <div class="msg active">
+          <div class="msg-profile group">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" class="css-i6dzq1">
+              <path d="M12 2l10 6.5v7L12 22 2 15.5v-7L12 2zM12 22v-6.5" />
+              <path d="M22 8.5l-10 7-10-7" />
+              <path d="M2 15.5l10-7 10 7M12 2v6.5" />
+            </svg>
+          </div>
+          <div class="msg-detail">
+            <div class="msg-username">Ethereum Auction Group</div>
+            <div class="msg-content">
+              <span class="msg-message">Users</span>
+              <!-- <span class="msg-date">28m</span> -->
+            </div>
+          </div>
+        </div>
+        <div class="msg online">
+          <img class="msg-profile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%282%29.png"
+            alt="" />
+          <div class="msg-detail">
+            <div class="msg-username">Lea Debere</div>
+            <div class="msg-content">
+              <span class="msg-message">Placed The Auction.</span>
+              <span class="msg-date">45m</span>
+            </div>
+          </div>
+        </div>
+        <div class="msg online">
+          <img class="msg-profile"
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%281%29+%281%29.png" alt="" />
+          <div class="msg-detail">
+            <div class="msg-username">Jordan Smith</div>
+            <div class="msg-content">
+              <span class="msg-message">I have also placed the auction .. </span>
+              <span class="msg-date">2h</span>
+            </div>
+          </div>
+        </div>
+        <div class="msg">
+          <img class="msg-profile"
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%284%29+%281%29.png" alt="" />
+          <div class="msg-detail">
+            <div class="msg-username">Jared Jackson</div>
+            <div class="msg-content">
+              <span class="msg-message">I am going to get profit🎉</span>
+              <span class="msg-date">18m</span>
+            </div>
+          </div>
+        </div>
+        <div class="msg online">
+          <img class="msg-profile"
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%283%29+%281%29.png" alt="">
+          <div class="msg-detail">
+            <div class="msg-username">Henry Clark</div>
+            <div class="msg-content">
+              <span class="msg-message">Is it safe to invest on this nft🤔.</span>
+              <span class="msg-date">2h</span>
+            </div>
+          </div>
+        </div>
+        <div class="msg">
+          <img class="msg-profile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/qs6F3dgm.png" alt="" />
+          <div class="msg-detail">
+            <div class="msg-username">Jason Mraz</div>
+            <div class="msg-content">
+              <span class="msg-message">I'm lucky I'm in with nft's</span>
+              <span class="msg-date">4h</span>
+            </div>
+          </div>
+        </div>
+        <div class="msg">
+          <img class="msg-profile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%288%29.png"
+            alt="" />
+          <div class="msg-detail">
+            <div class="msg-username">Chiwa Lauren</div>
+            <div class="msg-content">
+              <span class="msg-message">Buy this nft's as soon..</span>
+              <span class="msg-date">28m</span>
+            </div>
+          </div>
+        </div>
+        <div class="msg">
+          <img class="msg-profile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%289%29.png"
+            alt="" />
+          <div class="msg-detail">
+            <div class="msg-username">Caroline Orange</div>
+            <div class="msg-content">
+              <span class="msg-message">Profitable investment on this assests</span>
+              <span class="msg-date">35m</span>
+            </div>
+          </div>
+        </div>
+        <div class="msg">
+          <img class="msg-profile" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%286%29.png"
+            alt="" />
+          <div class="msg-detail">
+            <div class="msg-username">Lina Ashma</div>
+            <div class="msg-content">
+              <span class="msg-message">Grab the opportunity</span>
+              <span class="msg-date">42m</span>
+            </div>
+          </div>
+        </div>
+        <button class="add"></button>
+        <div class="overlay"></div>
+      </div>
+      <div class="chat-area">
+        <div class="chat-area-header">
+          <div class="chat-area-title">Etherum Auction Group</div>
+          <div class="chat-area-group">
+            <img class="chat-area-profile"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%283%29+%281%29.png" alt="" />
+            <img class="chat-area-profile"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%282%29.png" alt="">
+            <img class="chat-area-profile"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%2812%29.png" alt="" />
+            <span>+4</span>
+          </div>
+        </div>
+        <div class="chat-area-main">
+          <div class="chat-msg">
+            <div class="chat-msg-profile">
+              <img class="chat-msg-img"
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%283%29+%281%29.png" alt="" />
+              <div class="chat-msg-date">Message seen 1.22pm</div>
+            </div>
+            <div class="chat-msg-content">
+              <div class="chat-msg-text">No swearing or foul language allowed.</div>
+              <div class="chat-msg-text">
+                <img
+                  src="https://media0.giphy.com/media/yYSSBtDgbbRzq/giphy.gif?cid=ecf05e47344fb5d835f832a976d1007c241548cc4eea4e7e&rid=giphy.gif" />
+              </div>
+              <div class="chat-msg-text">All final bid amounts include 15% VAT subject to invoices settled within a 7 day period.</div>
+            </div>
+          </div>
+          <div class="chat-msg owner">
+            <div class="chat-msg-profile">
+              <img class="chat-msg-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%281%29.png"
+                alt="" />
+              <div class="chat-msg-date">Message seen 1.22pm</div>
+            </div>
+            <div class="chat-msg-content">
+              <div class="chat-msg-text">All payments to be paid into Ecomm Auctions (Pty) Ltd FNB bank account as per the invoice.😂😂😂</div>
+              <div class="chat-msg-text">Once payment reflects on our system, orders are sent through for processing and payments are confirmed .</div>
+            </div>
+          </div>
+          <div class="chat-msg">
+            <div class="chat-msg-profile">
+              <img class="chat-msg-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%282%29.png"
+                alt="">
+              <div class="chat-msg-date">Message seen 2.45pm</div>
+            </div>
+            <div class="chat-msg-content">
+              <div class="chat-msg-text">Should a member fail to settle an invoice amount the member will be banned and removed from the group with immediate effect.😊</div>
+              <div class="chat-msg-text">All paid invoices shall be dispatched within 2-3 working days once confirmation of payment.</div>
+            </div>
+          </div>
+          <div class="chat-msg owner">
+            <div class="chat-msg-profile">
+              <img class="chat-msg-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%281%29.png"
+                alt="" />
+              <div class="chat-msg-date">Message seen 2.50pm</div>
+            </div>
+            <div class="chat-msg-content">
+              <div class="chat-msg-text">Auctions open with a bid amount of R1.00, members can open a bid at any amount above R1.00</div>
+              <div class="chat-msg-text">Cras mollis nec arcu malesuada tincidunt.</div>
+            </div>
+          </div>
+          
+          <div class="chat-msg">
+            <div class="chat-msg-profile">
+              <img class="chat-msg-img"
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%283%29+%281%29.png" alt=""
+                class="account-profile" alt="">
+              <div class="chat-msg-date">Message seen 3.16pm</div>
+            </div>
+            <div class="chat-msg-content">
+              <div class="chat-msg-text">No auction reserve price on any items, unless otherwise stated.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="chat-area-footer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-video">
+            <path d="M23 7l-7 5 7 5V7z" />
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <path d="M21 15l-5-5L5 21" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 8v8M8 12h8" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-paperclip">
+            <path
+              d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" />
+          </svg>
+          <input type="text" placeholder="Type something here..." />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-up">
+            <path
+              d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3" />
+          </svg>
+        </div>
+      </div>
+      <div class="detail-area">
+        <div class="detail-area-header">
+          <div class="msg-profile group">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+              stroke-linejoin="round" class="css-i6dzq1">
+              <path d="M12 2l10 6.5v7L12 22 2 15.5v-7L12 2zM12 22v-6.5" />
+              <path d="M22 8.5l-10 7-10-7" />
+              <path d="M2 15.5l10-7 10 7M12 2v6.5" />
+            </svg>
+          </div>
+          <div class="detail-title">Etherum Auction Group</div>
+          <div class="detail-subtitle">Created the Auction, 24 November 2023</div>
+          <!-- <div class="detail-buttons">
+            <button class="detail-button">
+              <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor"
+                stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+              </svg>
+              Call Group
+            </button>
+            <button class="detail-button">
+              <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor"
+                stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="feather feather-video">
+                <path d="M23 7l-7 5 7 5V7z" />
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+              </svg>
+              Video Chat
+            </button>
+          </div> -->
+        </div>
+        <div class="detail-changes">
+          <input type="text" placeholder="Search in Conversation">
+          <div class="detail-change">
+            Change Color
+            <div class="colors">
+              <div class="color blue selected" data-color="blue"></div>
+              <div class="color purple" data-color="purple"></div>
+              <div class="color green" data-color="green"></div>
+              <div class="color orange" data-color="orange"></div>
+            </div>
+          </div>
+          <div class="detail-change">
+            Change Emoji
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-up">
+              <path
+                d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 
+        <div class="payment-section">
+          <h3>Payment Section</h3>
+          <div class="bid-list">
+           
+            <div class="bid-item">
+              <span>User1:</span>
+              <span>$50</span>
+            </div>
+            <div class="bid-item">
+              <span>User2:</span>
+              <span>$30</span>
+            </div> -->
+
+        <!-- </div>
+          <div class="make-payment">
+            <h4>Make Payment</h4>
+            <div class="payment-scroll">
+             
+              <div class="payment-item">
+                <span>User1:</span>
+                <span>$20</span>
+              </div>
+              <div class="payment-item">
+                <span>User2:</span>
+                <span>$10</span>
+              </div>
+            </div>
+            <textarea placeholder="Enter amount" class="payment-textarea"></textarea>
+            <button class="pay-button">Pay</button>
+          </div>
+        </div> -->
+
+
+        
+          
+
+
+
+
+
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- partial -->
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

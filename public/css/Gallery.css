@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #000000;
+  }
+  
+  .nft-grid {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 50px 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-auto-rows: auto;
+    grid-auto-flow: dense;
+    grid-gap: 20px;
+  }
+  
+  .nft-grid .grid-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .grid-item .grid-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s;
+    vertical-align: middle;
+    user-select: none;
+  }
+  
+  .grid-item .content {
+    width: 100%;
+    padding: 25px 20px 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(calc(100% + 15px));
+    transition: all 0.4s cubic-bezier(0.6, 0.13, 0.35, 0.81);
+  }
+  
+  .grid-item:hover .content {
+    transform: translate(0);
+  }
+  
+  .grid-item .content .inner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .grid-item .inner-content h2,
+  .grid-item .inner-content .eth {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  
+  .grid-item .inner-content h2 a,
+  .grid-item .inner-content .eth .dollar {
+    display: block;
+    color: #ffffff;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: underline;
+    text-transform: capitalize;
+    margin-top: 3px;
+  }
+  
+  .grid-item .inner-content .eth {
+    color: #0fdfe5;
+    text-align: right;
+  }
+  
+  .grid-item .inner-content .eth .dollar {
+    text-align: right;
+    text-decoration: none;
+  }
+  
+  .grid-item .action-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+  
+  .grid-item .action-btns button {
+    padding: 10px 18px;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid transparent;
+    font-size: 12px;
+    line-height: 9px;
+    text-align: center;
+    text-transform: capitalize;
+    outline: none;
+    user-select: none;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  
+  .grid-item .action-btns .view-btn {
+    background-color: transparent;
+    border-color: #ffffff;
+  }
+  
+  .grid-item .action-btns .bid-btn:hover {
+    background-color: transparent;
+    border-color: #ffffff;
+  }
+  
+  .grid-item .action-btns .view-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: transparent;
+  }
+  
+  .grid-item .profiles {
+    display: flex;
+    position: absolute;
+    top: -15px;
+    left: 20px;
+  }
+  
+  .grid-item .profiles .face {
+    width: 30px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    user-select: none;
+  }
+  
+  .grid-item .profiles .face:not(:nth-child(1)) {
+    margin-left: -10px;
+  }
+  
+  /* Let's write the media query */
+  @media (max-width: 768px) {
+    .nft-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  
+    .grid-item .content {
+      padding: 23px 15px 15px;
+      transform: translate(0);
+    }
+  
+    .grid-item .profiles {
+      left: 15px;
+    }
+  }
+  
